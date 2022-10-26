@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="home_page_fragment_label">Home</string>
+    <string name="favourites_page_fragment_label">My favourites</string>
+    <string name="list_page_fragment_label">List of Pms</string>
+    <string name="info_page_fragment_label">Info about {pmName}</string>
+    <string name="home_icon">Home</string>
+    <string name="favourites_icon">Favourites</string>
+    <string name="list_icon">Pms</string>
+    <string name="add_favourite">Add to favourites</string>
+    <string name="added_to_favourites">Added to favourites</string>
+    <string name="pm_info">Parliament Member info:</string>
+    <string name="app_introduction">The app gets data from a .Json file and converts the data into ParliamentMembers objects.
+        In Favourites tab you can see all the parliament members you have liked in a list.
+        You can also click them to open up a new tab that has the same info about them differently formatted.
+        In "Pms" you can see a list of all the Pms with no additional info, but if you click the Names or Images,
+        you can see additional info about the selected parliament member.</string>
+    <string name="welcome_message">Welcome to the Parliament Members app!</string>
+</resources>

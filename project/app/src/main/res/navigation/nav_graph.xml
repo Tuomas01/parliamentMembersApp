@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.project.HomePage"
+        android:label="@string/home_page_fragment_label"
+        tools:layout="@layout/fragment_home_page" />
+    <fragment
+        android:id="@+id/myFavourites"
+        android:name="com.example.project.MyFavourites"
+        android:label="@string/favourites_page_fragment_label"
+        tools:layout="@layout/fragment_my_favourites">
+        <action
+            android:id="@+id/action_myFavourites_to_selectedPm"
+            app:destination="@id/selectedPm" />
+    </fragment>
+    <fragment
+        android:id="@+id/pmListFragment"
+        android:name="com.example.project.PmListFragment"
+        android:label="@string/list_page_fragment_label">
+        <action
+            android:id="@+id/action_pmListFragment_to_selectedPm"
+            app:destination="@id/selectedPm" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedPm"
+        android:name="com.example.project.SelectedPm"
+        android:label="SelectedPm">
+        <argument
+            android:name="hetekaId"
+            app:argType="integer" />
+        <argument
+            android:name="pmName"
+            app:argType="string" />
+    </fragment>
+</navigation>

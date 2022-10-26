@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="150dp"
+        tools:context=".SelectedPm">
+
+        <TextView
+            android:id="@+id/selectedPmNameView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/selectedPmImg"
+            app:layout_constraintTop_toBottomOf="@+id/selectedPmImg"
+            tools:text="test" />
+
+        <ImageView
+            android:id="@+id/selectedPmImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/favouritesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/favouriteButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectedPmImg" />
+
+        <Button
+            android:id="@+id/favouriteButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:text="@string/add_favourite"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/selectedPmImg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectedPmImg"
+            app:layout_constraintTop_toTopOf="@+id/selectedPmImg" />
+
+        <Button
+            android:id="@+id/removeFavourite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="X"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/favouriteButton"
+            app:layout_constraintStart_toStartOf="@+id/favouriteButton"
+            app:layout_constraintTop_toBottomOf="@+id/favouriteButton" />
+
+        <TextView
+            android:id="@+id/pmInfoTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/pm_info"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/selectedPmNameView"
+            app:layout_constraintStart_toStartOf="@+id/selectedPmNameView"
+            app:layout_constraintTop_toBottomOf="@+id/selectedPmNameView" />
+
+        <TextView
+            android:id="@+id/aboutSelectedPm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/selectedPmNameView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/selectedPmNameView"
+            app:layout_constraintTop_toBottomOf="@+id/pmInfoTitle"
+            tools:text="about" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
